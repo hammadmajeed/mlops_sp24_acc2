@@ -1,8 +1,6 @@
-FROM python:3.10
-ENV USERNAME=hammad
+FROM python:3.11-slim
 RUN mkdir /app
 COPY . /app
-EXPOSE 5000
-WORKDIR /app
-RUN make install
-CMD ["python3", "main.py"]
+WORKDIR /app  
+RUN pip install -r requirements.txt
+CMD [ "python", "main.py" ]
