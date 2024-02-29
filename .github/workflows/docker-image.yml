@@ -15,6 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag hammadmajeed/flask_demo:1.0
-           docker login -u ${{SECRETS.DOCKER_USERNAME}} -p ${{SECRETS.DOCKER_PASSWORD}}
-           docker push hammadmajeed/flask_demo:1.0
+      run:  |
+          docker build . --file Dockerfile --tag hammadmajeed/flask_demo:1.0
+          docker login -u ${{SECRETS.DOCKER_USERNAME}} -p ${{SECRETS.DOCKER_PASSWORD}}
+          docker push hammadmajeed/flask_demo:1.0
