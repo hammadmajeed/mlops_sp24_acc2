@@ -6,4 +6,4 @@ def hello():
     return 'Hello World! I can make change at route: /change'
 
 if __name__ == '__main__':
-    app.run( host='0.0.0.0', port=5000, debug=True)
+    app.run( host='0.0.0.0', port=5000, debug=True) # note that host='0.0.0.0' is imp for external access
